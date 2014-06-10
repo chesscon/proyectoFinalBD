@@ -1,19 +1,50 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Welcome to Spring Web MVC project</title>
-  </head>
 
-  <body>
-    <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-    <p><i>To display a different welcome page for this project, modify</i>
-      <tt>index.jsp</tt> <i>, or create your own welcome page then change
-        the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-        welcome page and also update the welcome-file setting in</i>
-      <tt>web.xml</tt>.</p>
-  </body>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parque Jur&aacute;sico</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="${pageContext.request.contextPath}/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/plugins/timeline/timeline.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="${pageContext.request.contextPath}/css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+      
+      <jsp:include page="${pagina}.jsp" flush="true" />
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="${pageContext.request.contextPath}/js/jquery-1.10.2.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/plugins/metisM enu/jquery.metisMenu.js"></script>
+
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="${pageContext.request.contextPath}/js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/plugins/morris/morris.js"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="${pageContext.request.contextPath}/js/sb-admin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+    <script src="${pageContext.request.contextPath}/js/demo/dashboard-demo.js"></script>
+
+</body>
+
 </html>
