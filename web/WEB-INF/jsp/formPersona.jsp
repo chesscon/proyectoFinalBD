@@ -1,3 +1,5 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <div id="page-wrapper">
   <div class="row">
     <div class="col-lg-12">
@@ -13,7 +15,7 @@
         </div>
         <div class="panel-body">
 <div class="row">
-  <form role="form">
+  <form:form method="POST" commandName="persona" role="form">
     <div class="form-group">
       <label  for="exampleInputEmail2">CURP</label>
       <input type="email" class="form-control" id="exampleInputEmail2" placeholder="CURP">
@@ -46,7 +48,7 @@
     </div>
 
     <button type="submit" class="btn btn-default">Registrar Persona</button>
-  </form>
+  </form:form>
 </div><!-- /.row -->
 </div>
         </div></div></div>
