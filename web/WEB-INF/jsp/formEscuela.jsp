@@ -1,3 +1,5 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <div id="page-wrapper">
   <div class="row">
     <div class="col-lg-12">
@@ -13,43 +15,44 @@
           Ingrese los siguientes campos para crear una nueva escuela
         </div>
         <div class="panel-body">
+         <form:form method="POST" commandName="cliente" role="form">
           <div class="row">
             <div class="col-lg-12">
               <form role="form">
                 <div class="form-group">
                   <label>Nombre de la Escuela</label>
-                  <input class="form-control" placeholder="Nombre Escuela">
+                  <input class="form-control" placeholder="Nombre Escuela" name="nombre">
                 </div>
                 
                 <h2>Domicilio de la Escuela:</h2>
                 <div class="form-group input-group">
                   <span class="input-group-addon">Calle</span>
-                  <input type="text" class="form-control" placeholder="calle">
+                  <input type="text" class="form-control" placeholder="calle" name="calle">
                 </div>
                 
                 <div class="form-group input-group">
                   <span class="input-group-addon">Número</span>
-                  <input type="text" class="form-control" placeholder="000">
+                  <input type="text" class="form-control" placeholder="000" name ="numero">
                 </div>
                 
                 <div class="form-group input-group">
                   <span class="input-group-addon">Colonia</span>
-                  <input type="text" class="form-control" placeholder="colonia">
+                  <input type="text" class="form-control" placeholder="colonia" name="colonia">
                 </div>
                 
                 <div class="form-group input-group">
                   <span class="input-group-addon">CP</span>
-                  <input type="text" class="form-control" placeholder="55555">
+                  <input type="text" class="form-control" placeholder="55555" name="cp">
                 </div>
                 
                 <div class="form-group input-group">
                   <span class="input-group-addon">Ciudad</span>
-                  <input type="text" class="form-control" placeholder="ciudad">
+                  <input type="text" class="form-control" placeholder="ciudad" name="ciudad">
                 </div>
                 
                 <div class="form-group input-group">
                   <span class="input-group-addon">Estado</span>
-                  <input type="text" class="form-control" placeholder="estado">
+                  <input type="text" class="form-control" placeholder="estado" name="estado">
                 </div>
                 
                 <div class="form-group input-group">
@@ -69,6 +72,7 @@
             <!-- /.col-lg-12 (nested) -->
           </div>
           <!-- /.row (nested) -->
+          </form:form>
         </div>
         <!-- /.panel-body -->
       </div>

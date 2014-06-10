@@ -44,5 +44,5 @@ public class AdminController {
     model.addAttribute("pagina", "template" );
     model.addAttribute("pagina2", "formPersona" );
     return "index";
-  
+  }
 }
