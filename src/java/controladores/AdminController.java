@@ -34,6 +34,7 @@ public class AdminController {
   @RequestMapping(value="admin/crearEmpleado.htm", method = RequestMethod.GET)
   public String crearPersona( ModelMap model ) {
     model.addAttribute("pagina", "template" );
+    model.addAttribute("pagina2", "formEmpleado " );
     return "index";
   }
   
