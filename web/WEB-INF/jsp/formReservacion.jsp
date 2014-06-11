@@ -3,7 +3,7 @@
 <div id="page-wrapper">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">Formulario para registrar una Persona</h1>
+      <h1 class="page-header">Formulario para registrar una reservación</h1>
     </div>
     <!-- /.col-lg-12 -->
   </div>
@@ -17,19 +17,27 @@
         <form:form method="POST" commandName="reservacion" role="form">
           <div class="form-group">
             <label  for="exampleInputEmail2">Tipo</label>
-            <form:select path="tipo">
-                <form:options items="${tipoList}" itemValue="id" itemLabel="tipoVisita"/>
+            <form:select path="tipovisita">
+                <form:options items="${tipoList}" itemValue="id" itemLabel="descripcion"/>
               </form:select>
           </div>  
           
           <div class="form-group">
             <label  for="exampleInputEmail2">Fecha</label>
-            <input type="date" name="fecha" class="form-control">
+            <form:input path="fecha" class="form-control" />
+            <!--<input type="date" name="fecha" class="form-control">-->
           </div>
           
           <div class="form-group">
-            <label  for="exampleInputEmail2">Zonas a visitar</label>
-            <form:checkboxes items="${listaZonas}" path="zonas" />
+            <label  for="exampleInputEmail2">Zonas a visitar</label><br />
+            <form:checkboxes items="${listaZonas}" path="zonas" itemValue="id" itemLabel="descripcion" delimiter="<br />" />
+          </div>
+          
+          <div class="form-group">
+            <label  for="escuela">Seleccionar Escuela</label><br />
+            <form:select path="escuela" >
+                <form:options items="${ListEscuela}" itemValue="codigo" itemLabel="nombre"/>
+              </form:select>
           </div>
           
         </form:form>

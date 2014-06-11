@@ -60,10 +60,11 @@
           p:viewName="index" />
   -->
   
-  <!--
-  <bean id="clienteService" class="servicios.ClienteServiceImpl" />
-  <bean id="clienteValidator" class="validaciones.ClienteValidator" />
-  <bean id="pedidoService" class="servicios.PedidoServiceImpl" />
-  <bean id="mensajeriaService" class="servicios.MensajeriaServiceImpl" />
--->    
+  
+  <bean id="empleadoService" class="servicios.EmpleadoService" />
+  <bean id="zonaService" class="servicios.ZonaService" />
+  <bean id="reservacionService" class="servicios.ReservacionService" />
+  <bean id="personaService" class="servicios.PersonaService" />
+  <bean id="mostrarService" class="servicios.MostrarService" />
+    
 </beans>

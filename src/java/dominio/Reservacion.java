@@ -2,6 +2,7 @@ package dominio;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -13,8 +14,19 @@ public class Reservacion {
      private int id;
      private Tipovisita tipovisita;
      private Date fecha;
-     private Set<Zona> zonas = new HashSet<Zona>(0);
+     //private Set<Zona> zonas = new HashSet<Zona>(0);    
+     private List zonas;
+     //
      private Set<Realizar> realizars = new HashSet<Realizar>(0);
+     private Escuela escuela;
+
+  public Escuela getEscuela() {
+    return escuela;
+  }
+
+  public void setEscuela(Escuela escuela) {
+    this.escuela = escuela;
+  }
 
     public Reservacion() {
     }
@@ -23,7 +35,7 @@ public class Reservacion {
     public Reservacion(int id) {
         this.id = id;
     }
-    public Reservacion(int id, Tipovisita tipovisita, Date fecha, Set<Zona> zonas, Set<Realizar> realizars) {
+    public Reservacion(int id, Tipovisita tipovisita, Date fecha, List<Zona> zonas, Set<Realizar> realizars) {
        this.id = id;
        this.tipovisita = tipovisita;
        this.fecha = fecha;
@@ -52,11 +64,11 @@ public class Reservacion {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-    public Set<Zona> getZonas() {
+    public List<Zona> getZonas() {
         return this.zonas;
     }
     
-    public void setZonas(Set<Zona> zonas) {
+    public void setZonas(List<Zona> zonas) {
         this.zonas = zonas;
     }
     public Set<Realizar> getRealizars() {

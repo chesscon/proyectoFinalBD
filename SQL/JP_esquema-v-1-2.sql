@@ -75,24 +75,31 @@ alter table boleto alter id set default nextval('id_boleto');
 
 --Creación de la tabla tipoVisita:
 create table tipoVisita (
-	id serial constrainT pktipovisita PRIMARY KEY,
+	id serial constraint pktipovisita PRIMARY KEY,
 	descripcion varchar(255)
 );
 --Creación de la tabla reservacion:
 create table reservacion(
 	id serial constraint pkreservacion PRIMARY KEY,
 	tipo integer references tipoVisita (id) on update cascade on delete cascade,
-	fecha date default now() constraint fecha_reservacion check (fecha >= now())
+	fecha date default now()
 );
 --Creación de una secuencia para id reservacion:
 create sequence id_reservacion start 30000000;
 alter table reservacion alter id set default nextval('id_reservacion');
 
+--Creación de la tabla asistentes
+create table asistentes(
+	idReser integer references reservacion(id) on update cascade on delete cascade,
+	curpPersona varchar(20) references persona(CURP) on update cascade on delete cascade,
+	constraint pkAsistentes PRIMARY KEY (idReser, curpPersona)
+);
+
 --Creación de la tabla realizar(persona-realizar-reservacion):
 create table realizar(
 	idReser integer references reservacion (id) on update cascade on delete cascade,
 	curpPersona varchar(20) references persona (CURP) on update cascade on delete cascade,
-	fecha date default now() constraint fecha_reservacion check (fecha >= now()),
+	fecha date default now(),
 	medio varchar(100) not null,
 	constraint pkrealizar primary key (curpPersona, idReser)
 );
@@ -141,7 +148,8 @@ create table dinosaurio(
 	alimentacion varchar(255) not null,
 	reino varchar(100) not null,
 	filo varchar(100) not null,
-	clase varchar(100) not null
+	clase varchar(100) not null,
+	nombre varchar(100) not null
 );
 
 --Creación de la tabla requerimientos(dinosaurio):
@@ -247,7 +255,7 @@ alter table vehiculo alter id set default nextval ('id_vehiculo');
 --Creación de la tabla caractVehiculo:
 create table caractVehiculo(
 	idVehiculo integer references vehiculo (id) on update cascade on delete cascade,
-	idCaract integer,
+	idCaract serial,
 	caracteristica varchar(255) not null,
 	constraint pkCarcVehiculo Primary key (idVehiculo, idCaract)
 );

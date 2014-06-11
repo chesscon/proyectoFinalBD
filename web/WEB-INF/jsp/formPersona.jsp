@@ -8,47 +8,62 @@
     <!-- /.col-lg-12 -->
   </div>
 
-<div class="col-lg-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Ingrese los siguientes campos para registrar una persona
-        </div>
-        <div class="panel-body">
-<div class="row">
-  <form:form method="POST" commandName="persona" role="form">
-    <div class="form-group">
-      <label  for="exampleInputEmail2">CURP</label>
-      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="CURP">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword2">Nombre</label>
-      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Nombre">
-    </div>
-    <div class="form-group">
-      <label  for="exampleInputPassword2">Apellido Paterno</label>
-      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Apellido Paterno">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword2">Apellido Materno</label>
-      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Apellido Materno">
-    </div>
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Ingrese los siguientes campos para registrar una persona
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <form:form method="POST" commandName="persona" role="form">
+            <div class="form-group">
+              <label  for="curp">CURP</label>
+              <input type="text" class="form-control" id="curp" name="CURP" placeholder="CURP">
+            </div>
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+              <label  for="apaterno">Apellido Paterno</label>
+              <input type="text" class="form-control" id="apaterno" name="apaterno" placeholder="Apellido Paterno">
+            </div>
+            <div class="form-group">
+              <label for="amaterno">Apellido Materno</label>
+              <input type="text" class="form-control" id="amaterno" name="amaterno" placeholder="Apellido Materno">
+            </div>
+            <div class="form-group">
+              <label for="amaterno">Grado Escolar:</label>
+              <input type="text" class="form-control" name="grado" id="grado" placeholder="Ej. 1º de Primaria">
+            </div>
 
-    <div class="form-group">
-      <label  for="exampleInputPassword2">fecha</label>
-      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="dd/mm/aaaa">
-    </div>
+            <div class="form-group">
+              <label  for="fecha">Fecha de Nacimiento</label>
+              <input type="date" name="fechaNac" class="form-control" 
+                     placeholder="dd/mm/aaaa" id="fecha"/>
+            </div>
 
-    <div class="form-group">
-      <select class="form-control">
-        <option>Selecciona Tipo</option>
-        <option>Alumno</option>
-        <option>Profesor</option>
-        <option>Director</option>
-      </select>
-    </div>
+            <div class="form-group">
+              <select class="form-control" id="tipo" name="tipo">
+                <option>Selecciona Tipo</option>
+                <option value="ALUMNO">Alumno</option>
+                <option value="PROFESOR">Profesor</option>
+                <option value="DIRECTOR">Director</option>
+                <option value="OTRO">Otro</option>
+              </select>
+            </div>
 
-    <button type="submit" class="btn btn-default">Registrar Persona</button>
-  </form:form>
-</div><!-- /.row -->
+            <div class="form-group">
+              <label  for="escuela">Seleccionar Escuela</label><br />
+              <form:select path="idEscuela" >
+                <form:options items="${escuelas}" itemValue="codigo" itemLabel="nombre"/>
+              </form:select>
+            </div>
+
+            <button type="submit" class="btn btn-default">Registrar Persona</button>
+          </form:form>
+        </div><!-- /.row -->
+      </div>
+    </div>
+  </div>
 </div>
-        </div></div></div>

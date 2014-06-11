@@ -23,7 +23,11 @@ public class Escuela {
 
     public Escuela() {
     }
-
+    
+    public Escuela(int codigo, String nombre) {
+      this.codigo = codigo;
+      this.nombre = nombre;
+    }
 	
     public Escuela(int codigo, String nombre, String calle, String numero, String colonia, int cp, String ciudad, String estado) {
         this.codigo = codigo;

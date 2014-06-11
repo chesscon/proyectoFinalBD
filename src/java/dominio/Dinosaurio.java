@@ -8,7 +8,6 @@ import java.util.Set;
  */
 public class Dinosaurio {
 
-
      private int id;
      private Habitat habitat;
      private String alimentacion;

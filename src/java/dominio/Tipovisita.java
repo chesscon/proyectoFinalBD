@@ -20,6 +20,12 @@ public class Tipovisita {
     public Tipovisita(int id) {
         this.id = id;
     }
+    
+    public Tipovisita(int id, String descripcion) {
+        this.id = id;
+        this.descripcion = descripcion;
+    }
+    
     public Tipovisita(int id, String descripcion, Set<Reservacion> reservacions) {
        this.id = id;
        this.descripcion = descripcion;

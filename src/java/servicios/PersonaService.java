@@ -13,15 +13,15 @@ public class PersonaService {
 
     public void guardar(Persona persona) {
         String campos = "CURP, nombre, apaterno, amaterno, fecha_nac";
-        String datos = persona.getCurp() + ", " + persona.getNombre() + ", "
-         + persona.getApaterno() + ", " + persona.getAmaterno() + ", "
+        String datos = "'" + persona.getCurp() + "', '" + persona.getNombre() + "', '"
+         + persona.getApaterno() + "', '" + persona.getAmaterno() + "', "
          + persona.getFechaNac();
-        
+        System.out.println("Datos Persona:" + datos);
         DAO.insert("persona", campos, datos);
     }
 
     public void asignar(Reservacion reservacion, Persona persona) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //
     }
     
 }

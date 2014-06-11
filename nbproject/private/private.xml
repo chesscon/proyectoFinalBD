@@ -3,17 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/form.jsp</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/dominio/Dinosaurio.java</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/dominio/Usuario.java</file>
             <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/formEscuela.jsp</file>
-            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/page-wrapper.jsp</file>
             <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/controladores/ReservacionController.java</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/dominio/Reservacion.java</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/login.jsp</file>
             <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/menu.jsp</file>
-            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/template.jsp</file>
-            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/dominio/Realizar.java</file>
             <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/formReservacion.jsp</file>
-            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/formEmpleado.jsp</file>
-            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/controladores/AdminController.java</file>
             <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/formPersona.jsp</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/controladores/loginController.java</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/dominio/Tipovisita.java</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/modelo/DAO.java</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/servicios/MostrarService.java</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/formSuccess.jsp</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/controladores/mostrarController.java</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/redirect.jsp</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/Users/oscahern/Desarrollo/repos/proyectoFinalBD/src/java/dominio/Zona.java</file>
         </group>
     </open-files>
 </project-private>
